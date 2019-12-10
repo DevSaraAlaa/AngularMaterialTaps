@@ -1,0 +1,43 @@
+<!-- Start Header -->
+<header>
+  <mat-toolbar class="header">
+    <!--    <span class="font-25 text-color-primary-purple font-weight-bold">project</span>-->
+    <a routerLink="/">
+      <img class="header-logo" alt="logo">
+    </a>
+    <ul class="d-flex flex-grow-1 justify-content-center m-0 navigation-links">
+      <li class="font-16 text-color-onyx mx-5"><a mat-list-item routerLink="/">Home</a></li>
+      <li class="font-16 text-color-onyx mx-5"><a mat-list-item href="">My Service 1</a></li>
+      <li class="font-16 text-color-onyx mx-5"><a mat-list-item href="">My Service 2</a></li>
+<!--      <li class="font-16 text-color-onyx mx-5"><a mat-list-item href="">Knowledge Hub</a></li>
+      <li class="font-16 text-color-onyx mx-5"><a mat-list-item href="">Evaluation</a></li>-->
+    </ul>
+    <div class="d-flex h-100">
+      <span class="border-left"></span>
+      <button mat-flat-button>
+        <svg xmlns="http://www.w3.org/2000/svg" width="23.968" height="23.928" viewBox="0 0 23.968 23.928">
+          <path id="Path_2390" data-name="Path 2390"
+                d="M22.59,16.385c-2.7-2.7-3.1-4.051-3.1-8.361a8.023,8.023,0,1,0-16.046,0,13.557,13.557,0,0,1-.382,4.256,9.832,9.832,0,0,1-2.721,4.1,1.146,1.146,0,0,0,.811,1.957H7.51l-.058.573a4.012,4.012,0,1,0,8.023,0l-.058-.573h6.362A1.146,1.146,0,0,0,22.59,16.385Zm-11.125,5.4A2.866,2.866,0,0,1,8.6,18.915l.058-.573h5.615l.058.573A2.866,2.866,0,0,1,11.464,21.781ZM1.149,17.2c3.438-3.439,3.438-5.732,3.438-9.171a6.877,6.877,0,1,1,13.754,0c0,3.439,0,5.732,3.438,9.171Z"
+                transform="translate(0.52 0.5)" fill="#1d252d" stroke="#1d252d" stroke-width="1"/>
+        </svg>
+      </button>
+      <span class="border-left"></span>
+      <button type="button" mat-flat-button *ngIf="false">ع</button>
+      <button type="button" mat-flat-button *ngIf="true">EN</button>
+      <span class="border-left"></span>
+      <button mat-button [matMenuTriggerFor]="menu">
+        <span class="mx-2">Test User</span>
+        <svg class="mx-2" xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 18.532 10.266">
+          <path id="header_dropdown" d="M23.921,10.722l-7.852,7.852L8.217,10.722" transform="translate(-6.803 -9.308)"
+                fill="none" stroke="#4f008c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+        <img class="profile-img" src="assets/images/profilepic.png" alt="">
+      </button>
+      <mat-menu #menu="matMenu" class="mat-elevation-z0 border">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</header>
+<!-- End Menu -->

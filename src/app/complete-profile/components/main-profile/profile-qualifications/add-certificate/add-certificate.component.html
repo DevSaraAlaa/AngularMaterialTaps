@@ -1,0 +1,116 @@
+<div class="d-flex flex-column h-100">
+  <div class="d-flex border-bottom my-3 pb-3">
+    <span (click)="closeSidenav()" class="align-self-center mx-3 cursor-pointer">
+      <svg height="16.499" viewBox="0 0 16.5 16.499" width="16.5" xmlns="http://www.w3.org/2000/svg">
+        <g data-name="close (1)" id="close_1_" transform="translate(0 -0.522)">
+          <path
+            d="M9.709,8.272,16.2,1.784A1.032,1.032,0,0,0,14.739.325L8.25,6.813,1.761.325A1.032,1.032,0,1,0,.3,1.784L6.791,8.272.3,14.761a1.032,1.032,0,1,0,1.459,1.459L8.25,9.731l6.488,6.488A1.032,1.032,0,0,0,16.2,14.76Z"
+            data-name="Path 2632" id="Path_2632" transform="translate(0 0.5)"></path>
+        </g>
+      </svg>
+    </span>
+    <h2 class="mb-0 font-18 font-weight-500">Add Certifications</h2>
+  </div>
+  <div class="row h-100 mx-0 mt-3 overflow-auto">
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput placeholder="Certificate Name" value="Diploma, User Experience ">
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <mat-label>Organization/institution Name</mat-label>
+        <span matSuffix>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+            <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                  stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <mat-select>
+          <mat-option value="Bachelor">At ux design institute</mat-option>
+          <mat-option value="Non-Bachelor">Non-Bachelor</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput [matDatepicker]="certification" placeholder="Certification Date" (focus)="certification.open()" (click)="certification.open()">
+        <mat-datepicker #certification></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput [matDatepicker]="expiry" placeholder="Expiry Date" (focus)="expiry.open()" (click)="expiry.open()">
+        <mat-datepicker #expiry></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput placeholder="Credential ID" value="324E3267CF430287">
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-3 custom-textarea" floatLabel="always">
+        <textarea matInput placeholder="Credential Link" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="col-12 mb-5 upload-file-row">
+      <div class="upload-title">Upload Certification</div>
+      <div class="flex-grow-1">
+        <div class="upload-file-container" *ngIf="true">
+          <div class="progress-bar" style="width: 25%;" *ngIf="false">25%</div>
+          <div class="align-items-center d-flex flex-column" *ngIf="true">
+            <img class="mb-3" src="assets/images/upload-to-cloud.svg" alt="">
+            <p class="text-color-onyx-imp font-16-imp">
+              Drag and Drop file here <span class="font-weight-bold">or Browse</span>
+            </p>
+          </div>
+        </div>
+        <div class="uploaded-file-container" *ngIf="false">
+          <div class="uploaded-file-icon">
+            <img src="assets/images/pdf-file-icon.svg" *ngIf="false">
+            <img src="assets/images/doc-file-icon.svg" *ngIf="true">
+            <img src="assets/images/jpg-file-icon.svg" *ngIf="false">
+          </div>
+          <div class="flex-grow-1 mx-3">
+            <p class="font-18 font-weight-500">Attached file name</p>
+            <span class="font-weight-500 text-color-dark-gray">345 KB</span>
+          </div>
+          <div class="d-flex align-items-start align-self-start">
+            <button class="uploaded-file-actions">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14.909" height="12.331" viewBox="0 0 14.909 12.331">
+                <g id="Icon_feather-download-cloud" data-name="Icon feather-download-cloud"
+                   transform="translate(0.746 0.663)">
+                  <path id="Path_2978" data-name="Path 2978" d="M12,25.5l2.447,2.447L16.893,25.5"
+                        transform="translate(-7.713 -16.929)" fill="none" stroke="#a54ee1" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="1.3"/>
+                  <path id="Path_2979" data-name="Path 2979" d="M18,18v5.505" transform="translate(-11.266 -12.488)"
+                        fill="none" stroke="#a54ee1" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="1.3"/>
+                  <path id="Path_2980" data-name="Path 2980"
+                        d="M13.652,13.72a3.058,3.058,0,0,0-1.762-5.56H11.12a4.893,4.893,0,1,0-8.4,4.459"
+                        transform="translate(-1.486 -4.482)" fill="none" stroke="#a54ee1" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="1.3"/>
+                </g>
+              </svg>
+            </button>
+            <button class="uploaded-file-actions">
+              <svg id="Group_3029" data-name="Group 3029" xmlns="http://www.w3.org/2000/svg" width="14.247"
+                   height="14.248" viewBox="0 0 14.247 14.248">
+                <g id="edit" transform="translate(0 0)">
+                  <path id="Path_2621" data-name="Path 2621"
+                        d="M121.228.9a2.186,2.186,0,0,0-3.091,0l-8.665,8.665a.485.485,0,0,0-.125.214l-1.139,4.114a.486.486,0,0,0,.6.6l4.114-1.14a.486.486,0,0,0,.214-.125L121.8,4.562a2.188,2.188,0,0,0,0-3.091Zm-10.7,8.981,7.092-7.092,2.287,2.287-7.092,7.092Zm-.457.917,1.827,1.827-2.527.7Zm11.038-6.923-.515.515L118.309,2.1l.515-.515a1.214,1.214,0,0,1,1.717,0l.57.57A1.216,1.216,0,0,1,121.111,3.875Zm0,0"
+                        transform="translate(-108.19 -0.261)" fill="#a54ee1"/>
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button class="button-primary font-weight-500 w-100 p-3 text-uppercase">ADD</button>
+  </div>
+</div>
+

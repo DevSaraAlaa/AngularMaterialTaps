@@ -1,0 +1,68 @@
+<div class="profile-tab-content">
+    <h1>National Address
+      <svg xmlns="http://www.w3.org/2000/svg" width="25.699" height="25.699" viewBox="0 0 25.699 25.699">
+        <path id="Path_2783" data-name="Path 2783"
+              d="M14.134,19.274h-2.57v-7.71h2.57ZM12.849,0A12.849,12.849,0,1,1,0,12.849,12.887,12.887,0,0,1,12.849,0Zm0,23.129A10.279,10.279,0,1,0,2.57,12.849,10.31,10.31,0,0,0,12.849,23.129ZM14.134,8.995h-2.57V6.425h2.57Z"
+              fill="#bbc8ce"/>
+      </svg>
+    </h1>
+    <form [formGroup]="addressInfoForm">
+        <div class="row pt-5">
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <mat-label>City</mat-label>
+                <span matSuffix>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+                    <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                          stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <mat-select formControlName="city">
+                  <mat-option value="Cairo">Cairo</mat-option>
+                  <mat-option value="Makka">Makka</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <mat-label>District</mat-label>
+                <span matSuffix>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+                    <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                          stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+                  </svg>
+                </span>
+                <mat-select formControlName="district">
+                  <mat-option value="Option 1">Option 1</mat-option>
+                  <mat-option value="Option 2">Option 2</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <input formControlName="streetName" matInput placeholder="Street Name">
+              </mat-form-field>
+            </div>
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <input formControlName="buildingNumber" matInput placeholder="Building Number">
+              </mat-form-field>
+            </div>
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <input formControlName="postalCode" matInput placeholder="Postal Code">
+              </mat-form-field>
+            </div>
+            <div class="col-10">
+              <mat-form-field class="w-100 font-16-imp mb-5">
+                <input formControlName="additionalNumber" matInput placeholder="Additional Number">
+              </mat-form-field>
+            </div>
+          </div>
+
+          <!-- <button (click)="saveAddressInfoForm()" class="btn btn-primary"> Submit</button> -->
+
+    </form>
+
+  </div>
+  

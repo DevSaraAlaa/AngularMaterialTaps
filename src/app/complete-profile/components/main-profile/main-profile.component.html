@@ -1,0 +1,41 @@
+<div class="h-100">
+    <div class="row h-100 mx-0">
+      <div class="col-md-3 col-lg-2 bg-color-primary-purple">
+        <mat-action-list class="profile-links">
+          <button mat-list-item class="active" (click)="profileLinksClickHandler(tabBtn0,0)" #tabBtn0>Personal Information
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn1,1)" #tabBtn1>National Address
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn2,2)" #tabBtn2>Qualification Details
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn3,3)" #tabBtn3>Experience Details
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn4,4)" #tabBtn4>Bank Information
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn5,5)" #tabBtn5>Family Profile
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn6,6)" #tabBtn6>Medical Appointment
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn7,7)" #tabBtn7>Upload Documents
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn8,8)" #tabBtn8>Conflict Of Interest
+          </button>
+          <button mat-list-item (click)="profileLinksClickHandler(tabBtn9,9)" #tabBtn9>Policy Agreement
+          </button>
+        </mat-action-list>
+      </div>
+    <div class="col-md-9 col-lg-10"> 
+        <app-profile-tab [index]=index></app-profile-tab>
+        <div class="d-flex justify-content-end my-5 stepper-actions">
+          <button class="btn button-ternary px-3 mx-1" *ngIf="index!==0"
+                  (click)="profileLinksClickHandler(this.currentTab,this.index-1)"><i class="fal fa-angle-left fa-3x"></i>
+          </button>
+          <button class="btn button-primary px-3 mx-1" *ngIf="index!==9"
+                  (click)="profileNextHandler(this.currentTab,this.index+1)"><i class="fal fa-angle-right fa-3x"></i>
+          </button>
+        </div>
+      </div> 
+    </div>
+  </div>
+  
+  

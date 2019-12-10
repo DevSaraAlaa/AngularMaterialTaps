@@ -1,0 +1,128 @@
+$font-thin: 100;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: bold;
+$font-extra-bold: 800;
+$font-family: 'Betaproject';
+$font-size-base: 14;
+@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Bold.woff2') format('woff2'), url('assets/fonts/projectForward-Bold.woff') format('woff'), url('assets/fonts/projectForward-Bold.ttf') format('truetype');
+  font-weight: $font-bold;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-ExtraBoldItalic.woff2') format('woff2'), url('assets/fonts/projectForward-ExtraBoldItalic.woff') format('woff'), url('assets/fonts/projectForward-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: $font-extra-bold;
+  font-style: italic;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Italic.woff2') format('woff2'), url('assets/fonts/projectForward-Italic.woff') format('woff'), url('assets/fonts/projectForward-Italic.ttf') format('truetype');
+  font-weight: $font-regular;
+  font-style: italic;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Light.woff2') format('woff2'), url('assets/fonts/projectForward-Light.woff') format('woff'), url('assets/fonts/projectForward-Light.ttf') format('truetype');
+  font-weight: $font-light;
+  font-style: normal;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-ExtraBold.woff2') format('woff2'), url('assets/fonts/projectForward-ExtraBold.woff') format('woff'), url('assets/fonts/projectForward-ExtraBold.ttf') format('truetype');
+  font-weight: $font-extra-bold;
+  font-style: normal;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-LightItalic.woff2') format('woff2'), url('assets/fonts/projectForward-LightItalic.woff') format('woff'), url('assets/fonts/projectForward-LightItalic.ttf') format('truetype');
+  font-weight: $font-light;
+  font-style: italic;
+}*/
+
+@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Regular.woff2') format('woff2'), url('assets/fonts/projectForward-Regular.woff') format('woff'), url('assets/fonts/projectForward-Regular.ttf') format('truetype');
+  font-weight: $font-regular;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Medium.woff2') format('woff2'), url('assets/fonts/projectForward-Medium.woff') format('woff'), url('assets/fonts/projectForward-Medium.ttf') format('truetype');
+  font-weight: $font-medium;
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-Thin.woff2') format('woff2'), url('assets/fonts/projectForward-Thin.woff') format('woff'), url('assets/fonts/projectForward-Thin.ttf') format('truetype');
+  font-weight: $font-thin;
+  font-style: normal;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-MediumItalic.woff2') format('woff2'), url('assets/fonts/projectForward-MediumItalic.woff') format('woff'), url('assets/fonts/projectForward-MediumItalic.ttf') format('truetype');
+  font-weight: $font-medium;
+  font-style: italic;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-ThinItalic.woff2') format('woff2'), url('assets/fonts/projectForward-ThinItalic.woff') format('woff'), url('assets/fonts/projectForward-ThinItalic.ttf') format('truetype');
+  font-weight: $font-thin;
+  font-style: italic;
+}*/
+
+/*@font-face {
+  font-family: 'Betaproject';
+  src: url('assets/fonts/projectForward-BoldItalic.woff2') format('woff2'), url('assets/fonts/projectForward-BoldItalic.woff') format('woff'), url('assets/fonts/projectForward-BoldItalic.ttf') format('truetype');
+  font-weight: $font-bold;
+  font-style: italic;
+}*/
+
+p,
+div,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+article,
+section,
+main,
+content,
+table,
+td,
+th,
+button,
+input,
+select {
+  font-family: $font-family;
+}
+
+@mixin fonts {
+  @for $i from 10 through 60 {
+    .font-#{$i} {
+      font-size: #{$i/$font-size-base}rem;
+    }
+
+    .font-#{$i}-imp {
+      font-size: #{$i/$font-size-base}rem !important;
+    }
+  }
+}
+
+@include fonts;

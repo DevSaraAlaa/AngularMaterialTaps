@@ -1,0 +1,22 @@
+@import "scss/custom-bootstrap";
+@import '~@angular/material/theming';
+@import '~ngx-toastr/toastr';
+
+@include mat-core();
+$custom-typography: mat-typography-config(
+  $font-family: $font-family + ",sans-serif",
+  $headline: mat-typography-level(32px, 48px, 500),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+@include mat-core($custom-typography);
+
+$project-ej-ui-onboarding-primary: mat-palette($mat-indigo);
+$project-ej-ui-onboarding-accent: mat-palette($mat-pink, A200, A100, A400);
+$project-ej-ui-onboarding-warn: mat-palette($mat-red);
+
+
+$project-ej-ui-onboarding-theme: mat-light-theme($project-ej-ui-onboarding-primary, $project-ej-ui-onboarding-accent, $project-ej-ui-onboarding-warn);
+
+@include angular-material-theme($project-ej-ui-onboarding-theme);
+

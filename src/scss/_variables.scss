@@ -1,0 +1,140 @@
+$link-color: #3f51b5;
+$link-hover-color: currentColor;
+$link-hover-decoration: none;
+$label-margin-bottom: 0;
+
+$grid-breakpoints: (
+  xs: 0,
+  // handset portrait (small, medium, large) | handset landscape (small)
+  sm: 600px,
+  // handset landscape (medium, large) | tablet portrait(small, large)
+  md: 960px,
+  //  tablet landscape (small, large)
+  lg: 1280px,
+  // laptops and desktops
+  xl: 1600px // large desktops
+);
+$container-max-widths: (
+  sm: 600px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1600px
+);
+
+$mat-schedule-red: (
+  50: #f7e6eb,
+  100: #eabfcd,
+  200: #dc95ac,
+  300: #ce6b8b,
+  400: #c44b72,
+  500: #b92b59,
+  600: #b22651,
+  700: #aa2048,
+  800: #a21a3e,
+  900: #93102e,
+  A100: #ffc4cf,
+  A200: #ff91a6,
+  A400: #ff5e7d,
+  A700: #ff4568,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+$mat-schedule-green: (
+  50: #e1f5ea,
+  100: #b3e5cc,
+  200: #81d4aa,
+  300: #4ec387,
+  400: #28b66e,
+  500: #02a954,
+  600: #02a24d,
+  700: #019843,
+  800: #018f3a,
+  900: #017e29,
+  A100: #acffc0,
+  A200: #79ff99,
+  A400: #46ff72,
+  A700: #2cff5f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
+$mobile-header-height: 113px;
+
+$black: #000000;
+$white: #FFFFFF;
+$coral: #FF375E;
+$silver: #DDE0E1;
+$onyx: #1D242D;
+$primary-purple: #4F008C;
+$secondary-purple: #8048A9;
+$oasis-light: #00C48C;
+$light-gray: #F3F3F1;
+$dark-gray: #8E9AA0;
+$off-white: #f9f9f9;
+$danger: #CF2543;
+$warning: #FFDD40;
+$transparent: transparent;
+
+$colors: (
+  black:$black,
+  white: $white,
+  coral: $coral,
+  silver: $silver,
+  onyx: $onyx,
+  primary-purple: $primary-purple,
+  secondary-purple: $secondary-purple,
+  oasis-light: $oasis-light,
+  light-gray: $light-gray,
+  dark-gray:$dark-gray,
+  off-white:$off-white,
+  danger: $danger,
+  warning: $warning,
+  transparent:$transparent,
+);
+
+@mixin colors-bg-text {
+  @for $i from 1 through length($colors) {
+    $key: nth($colors, $i);
+    $value: nth($key, 2);
+    .bg-color-#{"" + nth($key, 1)} {
+      background-color: $value;
+    }
+    .text-color-#{"" + nth($key, 1)} {
+      color: $value;
+    }
+    .bg-color-#{"" + nth($key, 1)}-imp {
+      background-color: $value !important;
+    }
+    .text-color-#{"" + nth($key, 1)}-imp {
+      color: $value !important;
+    }
+  }
+}

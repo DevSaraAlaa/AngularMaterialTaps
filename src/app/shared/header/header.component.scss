@@ -1,0 +1,22 @@
+@import "variables";
+
+.header {
+  background-color: $white;
+  border-bottom: 1px solid $light-gray;
+}
+
+.navigation-links {
+  list-style-type: none;
+
+}
+
+.profile-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #F3F3F1;
+}
+
+.header-logo {
+  height: 42px;
+}

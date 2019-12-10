@@ -1,0 +1,110 @@
+<div class="d-flex flex-column h-100">
+  <div class="d-flex border-bottom my-3 pb-3">
+    <span (click)="closeSideNav()" class="align-self-center mx-3 cursor-pointer">
+      <svg height="16.499" viewBox="0 0 16.5 16.499" width="16.5" xmlns="http://www.w3.org/2000/svg">
+        <g data-name="close (1)" id="close_1_" transform="translate(0 -0.522)">
+          <path
+            d="M9.709,8.272,16.2,1.784A1.032,1.032,0,0,0,14.739.325L8.25,6.813,1.761.325A1.032,1.032,0,1,0,.3,1.784L6.791,8.272.3,14.761a1.032,1.032,0,1,0,1.459,1.459L8.25,9.731l6.488,6.488A1.032,1.032,0,0,0,16.2,14.76Z"
+            data-name="Path 2632" id="Path_2632" transform="translate(0 0.5)"></path>
+        </g>
+      </svg>
+    </span>
+    <h2 class="mb-0 font-18 font-weight-500">Add Experience</h2>
+  </div>
+  <div class="row h-100 mx-0 mt-3 overflow-auto">
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput placeholder="Job Title" value="Senior UI/UX Designer">
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <mat-label>Job Field</mat-label>
+        <span matSuffix>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+            <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                  stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <mat-select>
+          <mat-option value="Bachelor">IT & Information Technology</mat-option>
+          <mat-option value="Non-Bachelor">Non-Bachelor</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <mat-label>Job Location</mat-label>
+        <span matSuffix>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+            <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                  stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <mat-select>
+          <mat-option value="Bachelor">Riyadh, Saudi Arabia</mat-option>
+          <mat-option value="Non-Bachelor">Non-Bachelor</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput placeholder="Company Name" value="Alharbi Group">
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <mat-label>Company Sector</mat-label>
+        <span matSuffix>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+            <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                  stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <mat-select>
+          <mat-option value="Bachelor">Information Technology</mat-option>
+          <mat-option value="Non-Bachelor">Non-Bachelor</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <mat-label>Company Size</mat-label>
+        <span matSuffix>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+            <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                  stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+          </svg>
+        </span>
+        <mat-select>
+          <mat-option value="Bachelor">1-50</mat-option>
+          <mat-option value="Non-Bachelor">Non-Bachelor</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput placeholder="Monthly Salary" value="12000 SAR">
+      </mat-form-field>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-5">
+        <input matInput [matDatepicker]="start" placeholder="Start Date" (focus)="start.open()" (click)="start.open()">
+        <mat-datepicker #start></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-12 mb-3">
+      <mat-label class="d-block">Still in Work</mat-label>
+      <mat-slide-toggle class="my-3"></mat-slide-toggle>
+    </div>
+    <div class="col-12">
+      <mat-form-field class="w-100 font-16-imp mb-3 custom-textarea" floatLabel="always">
+        <textarea matInput placeholder="Responsibilities" rows="5"></textarea>
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <button class="button-primary font-weight-500 w-100 p-3 text-uppercase">ADD</button>
+  </div>
+</div>
+

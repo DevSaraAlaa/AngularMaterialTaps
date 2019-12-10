@@ -1,0 +1,98 @@
+.button-primary {
+  background-color: $coral;
+  border: 1px solid $coral;
+  color: $white;
+  border-radius: 0 !important;
+  -webkit-transition: all 0.4s;
+
+  &:hover {
+    background-color: $white;
+    color: $coral;
+    border: 1px solid $coral;
+  }
+
+  &:disabled {
+    background-color: $dark-gray !important;
+    border: 1px solid $dark-gray !important;
+    color: $white !important;
+    opacity: 1 !important;
+  }
+}
+
+.button-secondary {
+  background-color: $white;
+  border: 1px solid $coral;
+  color: $coral;
+  border-radius: 0 !important;
+  -moz-transition: all 0.4s;
+
+  &:hover {
+    background-color: $coral;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $dark-gray !important;
+    border: 1px solid $dark-gray !important;
+    color: $white !important;
+    opacity: 1 !important;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $coral;
+  }
+
+  &:hover:after,
+  &:active:after {
+    width: 100%;
+  }
+}
+
+.button-ternary {
+  background-color: $white;
+  border: 1px solid $dark-gray;
+  color: $dark-gray;
+  border-radius: 0 !important;
+  transition: all 0.4s;
+
+  &:hover {
+    background-color: $dark-gray;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $dark-gray !important;
+    border: 1px solid $dark-gray !important;
+    color: $white !important;
+    opacity: 1 !important;
+  }
+
+  &:after {
+    content: '';
+    position: relative;
+    z-index: -1;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: $dark-gray;
+  }
+
+  &:hover:after,
+  &:active:after {
+    width: 100%;
+  }
+}

@@ -1,0 +1,170 @@
+<div class="profile-tab-content">
+    <h1>Personal Information
+      <svg xmlns="http://www.w3.org/2000/svg" width="25.699" height="25.699" viewBox="0 0 25.699 25.699">
+        <path id="Path_2783" data-name="Path 2783"
+              d="M14.134,19.274h-2.57v-7.71h2.57ZM12.849,0A12.849,12.849,0,1,1,0,12.849,12.887,12.887,0,0,1,12.849,0Zm0,23.129A10.279,10.279,0,1,0,2.57,12.849,10.31,10.31,0,0,0,12.849,23.129ZM14.134,8.995h-2.57V6.425h2.57Z"
+              fill="#bbc8ce"/>
+      </svg>
+    </h1>
+    <form  [formGroup]="basicInfoForm">
+      <div class="row pt-5">
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="First Name EN"  [value]="basicInfoForm.value.firstNameEN" disabled>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="First Name AR" formControlName="firstNameAR"  required>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Father Name EN" formControlName="fatherNameEN">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Father Name AR" formControlName="fatherNameAR" required>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Grandfather Name EN" formControlName="grandFatherNameEN">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Grandfather Name AR" formControlName="grandFatherNameAR" required>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Family EN" formControlName="familyNameEN">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Family Name AR" formControlName="familyNameAR">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Nationality"  [value]="basicInfoForm.value.nationality" disabled>
+          </mat-form-field>
+         
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Gov.ID Place of Issue" formControlName="govIdPlaceOfIssue">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+
+
+          <mat-form-field class="w-100 font-16-imp mb-5">
+              <input matInput [matDatepicker]="picker" placeholder="Gov.ID Date of Issue" formControlName="govIdDateOfIssue">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input matInput placeholder="Government ID"  [value]="basicInfoForm.value.governmentId" disabled>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <mat-label>Gender</mat-label>
+            <span matSuffix>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+                <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                      stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <mat-select  formControlName="gender" >
+              <mat-option [value]="basicInfoForm.value.gender">{{basicInfoForm.value.gender}}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <mat-label>Religion</mat-label>
+            <span matSuffix>
+              <svg xmlns="http://www.w3.org/2000/svg" width="12.387" height="7.045" viewBox="0 0 12.387 7.045">
+                <path d="M8.217,10.722l5.133,5.234,5.133-5.234" transform="translate(-7.156 -9.662)" fill="none"
+                      stroke="#1d252d" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+              </svg>
+            </span>
+            <mat-select formControlName="religion">
+              <mat-option value="Muslim">Muslim</mat-option>
+              <mat-option value="Non-Muslim">Non-Muslim</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+            <mat-form-field class="w-100 font-16-imp mb-5">
+                <input disabled matInput placeholder="gregorianpicker" [value]="basicInfoForm.value.gregorianBOD">
+              </mat-form-field>
+          <!-- <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="gregorianBOD" matInput [matDatepicker]="gregorianpicker" placeholder="Gregorian B.O.D"
+                   (focus)="gregorianpicker.open()" (click)="gregorianpicker.open()" disabled>
+            <mat-datepicker #gregorianpicker></mat-datepicker>
+          </mat-form-field> -->
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+            <mat-form-field class="w-100 font-16-imp mb-5">
+                <input disabled matInput placeholder="hijriBOD" [value]="basicInfoForm.value.hijriBOD">
+              </mat-form-field>
+          <!-- <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="hijriBOD" matInput [matDatepicker]="hijripicker" placeholder="Hijri B.O.D" (focus)="hijripicker.open()" (click)="hijripicker.open()">
+            <mat-datepicker #hijripicker></mat-datepicker>
+          </mat-form-field> -->
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="birthPlace" matInput placeholder="Place of Birth">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="bloodType" matInput placeholder="Blood Type">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="passport" matInput placeholder="Passport">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="mobileNumber" matInput placeholder="Add Mobile No" required>
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="email" matInput placeholder="Personal Email Address">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5 offset-md-1">
+          <mat-form-field class="w-100 font-16-imp mb-5">
+            <input formControlName="maritalStatus" matInput placeholder="Marital Status">
+          </mat-form-field>
+        </div>
+        <div class="col-12 col-md-5">
+          <mat-form-field class="w-100 font-16-imp mb-5 number-input-container">
+            <button matSuffix (click)="childrenNumber.stepUp()" class="plus">
+              <i class="fal fa-angle-up"></i>
+            </button>
+            <input formControlName="childrenNumber" matInput #childrenNumber placeholder="Children No." min="0" type="number">
+            <button matSuffix (click)="childrenNumber.stepDown()">
+              <i class="fal fa-angle-down"></i>
+            </button>
+          </mat-form-field>
+        </div>
+      </div>
+      <!-- <button (click)="saveBasicInfoForm()" class="btn btn-primary"> Submit</button> -->
+
+    </form>
+  </div>
+  

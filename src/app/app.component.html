@@ -1,0 +1,10 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="over" position="end" [fixedInViewport]="true">
+    <ng-container *ngComponentOutlet="sidenavContent"></ng-container>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="flex-grow-1" role="main">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

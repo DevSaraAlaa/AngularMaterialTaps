@@ -1,0 +1,10 @@
+.profile-tab-content {
+  padding: 90px 300px 10px 80px;
+}
+
+
+@include media-breakpoint-down(sm){
+  .profile-tab-content {
+    padding: 20px 0;
+  }
+}

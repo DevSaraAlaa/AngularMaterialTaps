@@ -1,0 +1,243 @@
+//<editor-fold desc="Angular Material Inputs">
+.mat-input-element {
+  color: $onyx !important;
+  font-weight: 500 !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label,
+.mat-form-field-appearance-legacy.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  color: rgba($black, .5) !important;
+  font-weight: 500 !important;
+}
+
+.mat-form-field .mat-form-field-label {
+  color: rgba($onyx, .6) !important;
+  font-weight: bold !important;
+}
+
+.mat-focused .mat-form-field-underline .mat-form-field-ripple {
+  background-color: $onyx !important;
+}
+
+.mat-input-element:disabled,
+.mat-form-field-type-mat-select.mat-form-field-disabled,
+.mat-form-field-type-mat-native-select.mat-form-field-disabled .mat-form-field-infix::after,
+.mat-select-disabled .mat-select-value {
+  color: rgba($onyx, .6) !important;
+  font-weight: bold !important;
+}
+
+.mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
+  background-size: 100% 100% !important;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.42) 0%, rgba(0, 0, 0, 0.42) 100%, transparent 0%) !important;
+}
+
+.mat-form-field-disabled {
+  cursor: not-allowed;
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Angular Material Select">
+
+.mat-select-arrow {
+  width: 0 !important;
+  height: 0 !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+}
+
+.mat-select-value {
+  color: $onyx !important;
+  font-weight: 500 !important;
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Angular Material Datepicker">
+.mat-datepicker-content {
+  box-shadow: none !important;
+  border: 4px solid $light-gray !important;
+  border-radius: 0 !important;
+
+  .mat-calendar {
+    .mat-calendar-header {
+      .mat-calendar-controls {
+        display: flex !important;
+        justify-content: space-between !important;
+
+        .mat-calendar-spacer {
+          display: none !important;
+        }
+
+        .mat-calendar-period-button {
+          .mat-button-focus-overlay {
+            display: none !important;
+          }
+
+          .mat-calendar-arrow {
+            display: none !important;
+          }
+
+        }
+
+        .mat-calendar-previous-button {
+          order: -1;
+        }
+      }
+    }
+
+    .mat-calendar-content {
+      table.mat-calendar-table {
+        .mat-calendar-table-header {
+          tr:first-child {
+            th {
+              color: $dark-gray;
+              font-weight: bold;
+            }
+          }
+
+          tr:nth-child(2) {
+            .mat-calendar-table-header-divider {
+              &:after {
+                left: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+
+        .mat-calendar-body {
+          tr .mat-calendar-body-label {
+            display: none;
+          }
+
+          tr td {
+            color: $onyx;
+            font-weight: 500;
+
+            .mat-calendar-body-today {
+              border-color: $coral;
+            }
+
+            .mat-calendar-body-selected {
+              background-color: $coral;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Angular Material number input">
+.number-input-container {
+  input[type=number] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+  }
+
+  button {
+    outline: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mat-form-field-suffix {
+    display: flex;
+    flex-direction: column;
+
+    > button:last-child {
+      margin-top: -8px;
+    }
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Angular Material toggle slide">
+.mat-slide-toggle-bar {
+  width: 38px !important;
+  height: 22px !important;
+  background-color: transparent !important;
+  border: 2px solid $dark-gray !important;
+  border-radius: 24px !important;
+}
+
+.mat-slide-toggle-thumb {
+  height: 15px !important;
+  width: 15px !important;
+  background-color: $dark-gray !important;
+  box-shadow: none !important;
+}
+
+.mat-slide-toggle-thumb-container {
+  top: 1.4px !important;
+  left: 2px !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+  background-color: transparent !important;
+  border: 2px solid $primary-purple !important;
+  border-radius: 24px !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+  background-color: $primary-purple !important;
+  box-shadow: none !important;
+}
+
+.mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb-container {
+  top: 1.2px !important;
+  left: 1px !important;
+}
+
+// </editor-fold>
+
+
+.mat-form-field.custom-textarea {
+  border-color: $primary-purple;
+
+  textarea {
+    border: 1px solid rgba(0, 0, 0, 0.42);
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+  }
+
+  .mat-form-field-underline {
+    background: transparent;
+    display: none;
+  }
+}
+
+.mat-form-field.custom-textarea.mat-focused {
+
+
+  textarea {
+    border: 1px solid $primary-purple;
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 1rem !important;
+    font-weight: normal !important;
+  }
+
+  .mat-form-field-underline, .mat-form-field-ripple {
+    background: transparent;
+    display: none;
+  }
+}
